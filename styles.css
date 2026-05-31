@@ -2,7 +2,9 @@
    1. IMPORTS & VARIABLES
    ========================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ייבוא פונט עברי יפה (Heebo) */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&display=swap');
 
 :root {
     /* --- פלטת צבעים נבחרת: Cool Blue/Grey Tech --- */
@@ -29,6 +31,10 @@
    2. GLOBAL STYLES & ANIMATED BACKGROUND
    ========================================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-dark);
@@ -36,6 +42,12 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: var(--col-mist);
+    width: 100%;
+}
+
+/* תיקון גלילה כשהתפריט העליון קבוע */
+section, header, #about, #projects-section, #contact {
+    scroll-margin-top: 100px; 
 }
 
 .background-gradient {
@@ -47,6 +59,7 @@ body {
     overflow: hidden;
 }
 
+/* בועות רקע */
 .blob {
     position: absolute;
     filter: blur(80px);
@@ -236,7 +249,7 @@ h1.display-3 {
 }
 
 /* =========================================
-   6. PROJECTS GRID (עם התיקונים המבוקשים)
+   6. PROJECTS GRID
    ========================================= */
 
 .projects-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 3rem; }
@@ -263,88 +276,64 @@ h1.display-3 {
     border-color: white;
 }
 
-/* המיכל העגול החיצוני */
 .project-circle-img {
     width: 120px !important;
     height: 120px !important;
     border-radius: 50%;
-    
-    /* הגדרה קריטית כדי שהמסגרת לא תשנה את הגודל */
     box-sizing: border-box !important; 
-    
     background-size: cover !important; 
     background-position: center center !important;
     background-repeat: no-repeat !important;
-    
     position: relative; 
     overflow: hidden;
     margin: 0 auto 15px;
-    
     box-shadow: 0 8px 20px rgba(114, 150, 164, 0.2);
-    border: 3px solid rgba(255, 255, 255, 0.8); /* המסגרת */
+    border: 3px solid rgba(255, 255, 255, 0.8);
     transition: transform 0.3s ease;
     background-color: white;
-    z-index: 1; /* סדר שכבות בסיסי */
+    z-index: 1;
 }
 
 .project-card-wrapper:hover .project-circle-img {
     transform: scale(1.05);
 }
 
-/* שכבת הכיסוי בהובר */
 .circle-overlay {
     position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100% !important;  /* רוחב מלא */
-    height: 100% !important; /* גובה מלא */
-    border-radius: 50%;      /* התאמה מושלמת לעיגול */
-    
-    /* צבע רקע - לבן מלא שמסתיר את התמונה */
+    top: 0; left: 0;
+    width: 100% !important; height: 100% !important;
+    border-radius: 50%;
     background: #ffffff;
-    
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    
-    opacity: 0; 
-    transition: opacity 0.5s ease; 
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.5s ease; 
     color: var(--text-dark);
     text-align: center; 
-    padding: 0 !important; /* ביטול ריפוד כדי שיגיע לקצה */
-    z-index: 10; /* מוודא שזה מעל התמונה */
+    padding: 0 !important;
+    z-index: 10;
 }
-.project-card-wrapper:hover .circle-overlay { opacity: 0.85; }
 
+.project-card-wrapper:hover .circle-overlay { opacity: 0.85; }
 .circle-overlay img { max-width: 40px; height: auto; margin-bottom: 0px; }
 
-/* 2. עיצוב הטקסט: שורה אחת וקטן יותר */
-/* הגדרה ספציפית לכותרת בתוך העיגול */
 .circle-overlay h6 {
-    font-size: 0.6rem !important; /* גודל פונט קטן ועדין */
-    white-space: nowrap !important; /* מכריח שורה אחת בלבד */
+    font-size: 0.6rem !important;
+    white-space: nowrap !important;
     font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1;
-    overflow: hidden; /* מונע גלישה אם הטקסט ארוך מדי */
-    text-overflow: ellipsis; /* מוסיף ... אם זה ארוך מדי */
-    max-width: 90%; /* שלא יידבק לקצוות */
+    overflow: hidden; text-overflow: ellipsis; 
+    max-width: 90%;
 }
 
-/* טקסטים מתחת לעיגול */
 .project-number {
     font-size: 1.2rem; font-weight: 700; color: var(--col-steel);
     display: block; margin-bottom: 2px;
 }
 .project-card-wrapper:hover .project-number { color: var(--text-dark); transition: 0.3s; }
-
-.project-cat {
-    font-size: 0.9rem; color: var(--text-muted); font-weight: 500;
-}
+.project-cat { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
 
 /* =========================================
-   9. EDITORIAL CONTACT SECTION (Fixed & Animated Header)
+   7. EDITORIAL CONTACT SECTION 
    ========================================= */
 
 .editorial-contact-section {
@@ -352,47 +341,37 @@ h1.display-3 {
     position: relative;
     overflow: hidden;
     background-color: transparent; 
-    min-height: 100vh; /* גובה מלא למראה מרשים */
-    display: flex;
-    align-items: center; /* מירכוז אנכי */
+    min-height: 80vh;
 }
 
-.big-contact-bg-text {
-    position: absolute;
-    top: 10%; /* קצת יותר למעלה */
-    left: -5%; /* מתחיל טיפה בחוץ, לא לגמרי */
-    
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 25vw;
-    line-height: 0.8;
-    white-space: nowrap;
-    
-    /* תיקון צבע: טיפה יותר כהה כדי שיראו אותו */
-    color: rgba(45, 52, 54, 0.05); 
-    
-    z-index: 1; /* מעל לרקע הכללי, מתחת לטופס */
-    pointer-events: none;
-    
-    /* האנימציה */
-    transform: translateX(-100px); /* התחלה קרובה יותר */
-    opacity: 0; /* מתחיל שקוף */
-    transition: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* המחלקה שה-JS מוסיף - מפעילה את הכניסה */
-.big-contact-bg-text.active {
-    transform: translateX(0); /* זז למקום */
-    opacity: 1; /* נהיה גלוי */
-}
-
-/* --- תוכן הטופס --- */
 .contact-content {
     position: relative;
-    z-index: 2; /* מעל הכותרת */
+    z-index: 2; /* Content above big text */
 }
 
-/* --- אייקונים ופרטים --- */
+/* --- BIG BACKGROUND TEXT --- */
+.big-contact-header {
+    position: absolute;
+    top: -5%;
+    left: -2%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 23vw;
+    line-height: 0.8;
+    white-space: nowrap;
+    color: var(--col-slate); /* כחול-אפור בולט */
+    opacity: 0.15; /* שקוף קצת כדי שלא יפריע לקריאה */
+    z-index: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.big-contact-header.active {
+    transform: translateX(0);
+}
+
+/* --- Contact Details & Icons --- */
 .icon-box {
     width: 45px; height: 45px;
     display: flex; align-items: center; justify-content: center;
@@ -402,6 +381,7 @@ h1.display-3 {
     box-shadow: 0 4px 15px rgba(114, 150, 164, 0.15);
     transition: 0.3s;
 }
+
 .contact-row:hover .icon-box {
     transform: scale(1.1);
     background: #fff;
@@ -419,7 +399,7 @@ h1.display-3 {
 }
 .detail-value:hover { color: var(--col-slate); }
 
-/* --- כפתורים --- */
+/* --- Contact Buttons --- */
 .pill-btn {
     display: inline-flex; align-items: center; gap: 12px;
     padding: 12px 35px; border-radius: 50px;
@@ -427,27 +407,24 @@ h1.display-3 {
     background: rgba(255, 255, 255, 0.5);
     color: var(--text-dark);
     font-weight: 600; font-size: 1rem;
-    transition: all 0.3s ease; cursor: pointer;
+    transition: all 0.3s ease; cursor: pointer; backdrop-filter: blur(5px);
 }
 
 .pill-btn:hover, .pill-btn.active, .pill-btn.black-fill {
-    background: var(--text-dark);
-    color: #fff;
-    border-color: var(--text-dark);
+    background: var(--text-dark); color: #fff; border-color: var(--text-dark);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .dot {
     width: 10px; height: 10px; background: var(--text-dark);
-    border-radius: 50%; border: 2px solid var(--text-dark);
-    transition: 0.3s;
+    border-radius: 50%; border: 2px solid var(--text-dark); transition: 0.3s;
 }
 .dot.empty { background: transparent; }
 .pill-btn:hover .dot, .pill-btn.active .dot, .dot.white {
     background: #fff; border-color: #fff;
 }
 
-/* --- טופס מינימליסטי --- */
+/* --- Contact Form Minimalist --- */
 .input-group-minimal { position: relative; padding-top: 25px; }
 
 .input-minimal {
@@ -468,15 +445,8 @@ h1.display-3 {
     top: -5px; font-size: 0.8rem; color: var(--col-slate); font-weight: 700;
 }
 
-/* --- אנימציות כלליות לתוכן --- */
-.fade-up { opacity: 1; transform: translateY(0); }
-html.js-loaded .fade-up { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
-html.js-loaded .fade-up.active { opacity: 1; transform: translateY(0); }
-.delay-200 { transition-delay: 0.2s; }
-
-.delay-200 { transition-delay: 0.2s; }
 /* =========================================
-   8. MODALS / DETAILS
+   8. MODALS / PROJECT DETAILS
    ========================================= */
 
 .project-details-overlay {
@@ -514,9 +484,7 @@ html.js-loaded .fade-up.active { opacity: 1; transform: translateY(0); }
     transition: 0.2s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.close-project-btn:hover {
-    background: #2A384C; color: white; transform: rotate(90deg);
-}
+.close-project-btn:hover { background: #2A384C; color: white; transform: rotate(90deg); }
 
 .content-side {
     background: #ffffff;
@@ -550,87 +518,152 @@ html.js-loaded .fade-up.active { opacity: 1; transform: translateY(0); }
     border: 1px solid rgba(158, 190, 203, 0.3);
 }
 
-/* Animations */
+/* IPHONE MOCKUP CLASS (For Pasta App) */
+.iphone-mockup {
+    max-height: 70vh !important;
+    width: auto !important;
+    border-radius: 35px !important;
+    border: 14px solid #1a1a1a !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
+    background-color: #fff;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* =========================================
+   9. SCROLL ANIMATIONS (Intersection Observer)
+   ========================================= */
+
 .reveal-section, .reveal-grid { opacity: 0; transform: translateY(30px); transition: 1s; }
 .reveal-section.active, .reveal-grid.active { opacity: 1; transform: translateY(0); }
 .stagger-item { opacity: 0; transform: translateY(30px) scale(0.9); transition: all 0.6s; }
 .reveal-grid.active .stagger-item { opacity: 1; transform: translateY(0) scale(1); }
-/* === אנימציית כניסה מפוצלת (Split Reveal) === */
 
-/* צד שמאל - מגיע משמאל */
+.fade-up { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+.fade-up.active { opacity: 1; transform: translateY(0); }
+.delay-200 { transition-delay: 0.2s; }
+
+/* Split Reveal Animations */
 .slide-from-left {
-    opacity: 0;
-    transform: translateX(-100px); /* מתחיל 100 פיקסלים שמאלה */
-    filter: blur(10px); /* מתחיל מטושטש */
-    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); /* תנועה חלקה מאוד */
-}
-
-/* המצב הפעיל (אחרי שה-JS מזהה גלילה) */
-.slide-from-left.active {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-}
-
-/* צד ימין - מגיע מימין */
-.slide-from-right {
-    opacity: 0;
-    transform: translateX(100px); /* מתחיל 100 פיקסלים ימינה */
-    filter: blur(10px);
+    opacity: 0; transform: translateX(-100px); filter: blur(10px);
     transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-    transition-delay: 0.2s; /* דיליי קטן כדי שייכנס אחרי השמאלי */
+}
+.slide-from-left.active { opacity: 1; transform: translateX(0); filter: blur(0); }
+
+.slide-from-right {
+    opacity: 0; transform: translateX(100px); filter: blur(10px);
+    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); transition-delay: 0.2s;
+}
+.slide-from-right.active { opacity: 1; transform: translateX(0); filter: blur(0); }
+
+/* =========================================
+   10. LANGUAGE SUPPORT (RTL & HEBREW)
+   ========================================= */
+
+body.rtl {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Heebo', 'Rubik', sans-serif !important;
 }
 
-.slide-from-right.active {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
+body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5 {
+    font-weight: 700 !important; 
+    letter-spacing: normal !important;
+}
+body.rtl .display-3 { font-size: 4rem !important; }
+body.rtl .display-6 { font-size: 3.2rem !important; }
+body.rtl h2.projects-title { font-size: 3.5rem !important; }
+
+body.rtl .text-start, body.rtl .text-lg-start { text-align: right !important; }
+body.rtl .text-md-end { text-align: left !important; }
+
+body.rtl .navbar-nav { padding-right: 0; }
+body.rtl .me-2, body.rtl .me-3 { margin-left: 0.5rem !important; margin-right: 0 !important; }
+body.rtl .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
+
+body.rtl .btn-glass i, body.rtl .pill-btn i { margin-left: 8px; margin-right: 0; }
+body.rtl .fa-arrow-right { transform: rotate(180deg); }
+
+/* RTL Contact Header Fix */
+body.rtl .big-contact-header {
+    left: auto; right: -2%;
+    transform: translateX(100%);
+}
+body.rtl .big-contact-header.active { transform: translateX(0); }
+
+/* RTL Form Fix */
+body.rtl .input-group-minimal label {
+    left: auto; right: 0; transform-origin: right top;
 }
 
-/* ==================================================
-       תיקון גורף למובייל - יישור לשמאל וסדר רגיל
-       ================================================== */
-    @media (max-width: 991px) {
-        
-        /* 1. מכריח את כל הטקסטים והכותרות להתיישר לשמאל */
-        body, section, .container, .row, .col-lg-5, .col-lg-6, 
-        h1, h2, h3, h4, h5, p, .projects-header {
-            text-align: left !important;
-        }
+/* =========================================
+   11. MOBILE RESPONSIVENESS
+   ========================================= */
 
-        /* 2. מבטל מצב של "היפוך" שורות - שומר על הסדר של המחשב */
-        .row {
-            flex-direction: column !important;
-        }
-        
-        /* תיקון ספציפי: מחזיר את הכפתורים (בטופס וב-Hero) לשורה אחת אם יש מקום */
-        .d-flex:not(.flex-column) {
-            justify-content: flex-start !important;
-        }
-
-        /* 3. טיפול ספציפי בכרטיסים שלא יימתחו מוזר */
-        .glass-card, .glass-square-card {
-            align-items: flex-start !important; /* מיישר את התוכן בתוך הכרטיס לשמאל */
-            text-align: left !important;
-        }
-
-        /* 4. שומר על העיגול של הפרויקטים באמצע הכרטיס שלו, אבל הטקסט למטה לשמאל */
-        .project-card-wrapper .glass-square-card {
-            align-items: center !important; /* חריג: בפרויקטים התמונה באמצע */
-        }
-        
-        /* החזרת הריווח לכותרות */
-        .title-separator {
-            margin: 20px 0 !important; /* הקו מתחת לכותרת יזוז לשמאל */
-        }
+@media (max-width: 991px) {
+    /* Align everything to standard flow on mobile */
+    body, section, .container, .row, .col-lg-5, .col-lg-6, .col-lg-3, .col-lg-9,
+    h1, h2, h3, h4, h5, p, .projects-header {
+        text-align: left !important;
+        align-items: flex-start !important;
     }
-    /* === תיקון גלילה (Scroll Offset) === */
-/* זה גורם לגלילה לעצור 100 פיקסלים לפני הסקשן, כדי שהתפריט לא יסתיר את הכותרת */
+    
+    body.rtl, body.rtl section, body.rtl .container, body.rtl .row, 
+    body.rtl .col-lg-5, body.rtl .col-lg-6, body.rtl .col-lg-3, body.rtl .col-lg-9,
+    body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5, body.rtl p, 
+    body.rtl .projects-header {
+        text-align: right !important;
+        align-items: flex-start !important;
+    }
 
-html {
-    scroll-behavior: smooth;
+    .row { flex-direction: column !important; }
+    
+    .d-flex:not(.flex-column) { justify-content: flex-start !important; }
+    body.rtl .d-flex:not(.flex-column) { justify-content: flex-start !important; }
+
+    /* Hero */
+    .hero-section { padding-top: 120px; }
+    .hero-section .row { flex-direction: column-reverse !important; gap: 30px; }
+    .display-3, body.rtl .display-3 { font-size: 3rem !important; }
+    #myCanvasContainer { height: 300px !important; width: 100%; max-width: 400px; margin: 0 auto; display: flex; justify-content: center; }
+    #myCanvas { width: 100% !important; height: auto !important; }
+    
+    /* Cards */
+    .glass-card, .glass-square-card { align-items: flex-start !important; text-align: left !important; }
+    body.rtl .glass-card, body.rtl .glass-square-card { text-align: right !important; }
+    .project-card-wrapper .glass-square-card { align-items: center !important; text-align: center !important; } /* Projects remain centered */
+    
+    .title-separator { margin: 20px 0 !important; }
+    .projects-header { padding: 40px 0; }
+    
+    /* Animations on mobile (Simplified) */
+    .slide-from-left, .slide-from-right {
+        transform: translateY(50px); opacity: 0; filter: blur(0);
+    }
+    body.rtl .slide-from-left, body.rtl .slide-from-right { transform: translateY(50px); }
+
+    /* Contact Section Mobile */
+    .editorial-contact-section { padding: 80px 0; min-height: auto; }
+    
+    .big-contact-header {
+        font-size: 35vw; /* Smaller on mobile but still big */
+        top: 2%; left: 0;
+        transform: translateX(-50px);
+    }
+    .big-contact-header.active { transform: translateX(0); }
+    
+    body.rtl .big-contact-header { right: 0; transform: translateX(50px); }
+    body.rtl .big-contact-header.active { transform: translateX(0); }
+    
+    .contact-content .row { gap: 40px; }
+    .contact-details { margin-bottom: 30px; }
+    .pill-btn { width: 100%; justify-content: center; }
 }
 
-section, header, #about, #projects-section, #contact {
-    scroll-margin-top: 100px; /* זה הקסם! תוכלי לשנות את המספר לפי גובה התפריט שלך */
+@media (max-width: 576px) {
+    h1.display-3, body.rtl .display-3 { font-size: 2.5rem !important; }
+    .hero-text { font-size: 1rem; }
+    .glass-card { padding: 1.5rem !important; }
+    .profile-circle { width: 90px; height: 90px; font-size: 1.8rem; }
 }
