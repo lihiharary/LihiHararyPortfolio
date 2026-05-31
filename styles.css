@@ -3,25 +3,25 @@
    ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
-/* ייבוא פונט עברי יפה (Heebo) */
+/* ייבוא פונט עברי יפה */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;700;900&display=swap');
 
 :root {
-    /* --- פלטת צבעים נבחרת: Cool Blue/Grey Tech --- */
-    --col-slate: #7296A4;       /* כחול-אפור כהה */
-    --col-steel: #9EBECB;       /* תכלת פלדה */
-    --col-cloud: #CDDEE5;       /* תכלת מעונן */
-    --col-ice: #E6F0F2;         /* רקע כחלחל בהיר */
-    --col-mist: #EFEFEF;        /* אפור בהיר */
+    /* פלטת צבעים */
+    --col-slate: #7296A4;       
+    --col-steel: #9EBECB;       
+    --col-cloud: #CDDEE5;       
+    --col-ice: #E6F0F2;         
+    --col-mist: #EFEFEF;        
 
     /* צבעי טקסט */
     --text-dark: #2D2E4E;
     --text-muted: #647D8C;
 
-    /* גרדיינט ראשי */
+    /* גרדיינט */
     --primary-gradient: linear-gradient(135deg, var(--col-steel) 0%, var(--col-slate) 100%);
     
-    /* הגדרות זכוכית */
+    /* זכוכית */
     --glass-bg: rgba(255, 255, 255, 0.65);
     --glass-border: rgba(255, 255, 255, 0.8);
     --glass-shadow: 0 8px 32px 0 rgba(114, 150, 164, 0.1);
@@ -59,7 +59,6 @@ section, header, #about, #projects-section, #contact {
     overflow: hidden;
 }
 
-/* בועות רקע */
 .blob {
     position: absolute;
     filter: blur(80px);
@@ -249,7 +248,7 @@ h1.display-3 {
 }
 
 /* =========================================
-   6. PROJECTS GRID
+   6. PROJECTS GRID 
    ========================================= */
 
 .projects-title { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 3rem; }
@@ -346,29 +345,7 @@ h1.display-3 {
 
 .contact-content {
     position: relative;
-    z-index: 2; /* Content above big text */
-}
-
-/* --- BIG BACKGROUND TEXT --- */
-.big-contact-header {
-    position: absolute;
-    top: -5%;
-    left: -2%;
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 23vw;
-    line-height: 0.8;
-    white-space: nowrap;
-    color: var(--col-slate); /* כחול-אפור בולט */
-    opacity: 0.15; /* שקוף קצת כדי שלא יפריע לקריאה */
-    z-index: 0;
-    pointer-events: none;
-    transform: translateX(-100%);
-    transition: transform 1.5s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.big-contact-header.active {
-    transform: translateX(0);
+    z-index: 2; 
 }
 
 /* --- Contact Details & Icons --- */
@@ -518,91 +495,61 @@ h1.display-3 {
     border: 1px solid rgba(158, 190, 203, 0.3);
 }
 
-/* IPHONE MOCKUP CLASS (For Pasta App) */
-.iphone-mockup {
-    max-height: 70vh !important;
-    width: auto !important;
-    border-radius: 35px !important;
-    border: 14px solid #1a1a1a !important;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
-    background-color: #fff;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-}
-
 /* =========================================
-   9. SCROLL ANIMATIONS (Intersection Observer)
+   9. SCROLL ANIMATIONS (Bulletproof Fix)
    ========================================= */
 
-.reveal-section, .reveal-grid { opacity: 0; transform: translateY(30px); transition: 1s; }
-.reveal-section.active, .reveal-grid.active { opacity: 1; transform: translateY(0); }
-.stagger-item { opacity: 0; transform: translateY(30px) scale(0.9); transition: all 0.6s; }
-.reveal-grid.active .stagger-item { opacity: 1; transform: translateY(0) scale(1); }
-
-.fade-up { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
-.fade-up.active { opacity: 1; transform: translateY(0); }
-.delay-200 { transition-delay: 0.2s; }
-
-/* Split Reveal Animations */
-.slide-from-left {
-    opacity: 0; transform: translateX(-100px); filter: blur(10px);
-    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* הגדרת מעברים לכל האלמנטים שמונפשים - הוספתי הגנה כך שאם הJS נכשל, תראי הכל */
+.reveal-section, .reveal-grid, .stagger-item, 
+.fade-up, .slide-from-left, .slide-from-right {
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.slide-from-left.active { opacity: 1; transform: translateX(0); filter: blur(0); }
 
-.slide-from-right {
-    opacity: 0; transform: translateX(100px); filter: blur(10px);
-    transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); transition-delay: 0.2s;
+/* הסתרה קורית רק אם המחלקה js-loaded נוספה ע"י ה-JavaScript */
+html.js-loaded .reveal-section, 
+html.js-loaded .reveal-grid { opacity: 0; transform: translateY(30px); }
+
+html.js-loaded .stagger-item { opacity: 0; transform: translateY(30px) scale(0.9); }
+
+html.js-loaded .fade-up { opacity: 0; transform: translateY(40px); }
+
+html.js-loaded .slide-from-left { opacity: 0; transform: translateX(-100px); filter: blur(10px); }
+html.js-loaded .slide-from-right { opacity: 0; transform: translateX(100px); filter: blur(10px); }
+
+/* חשיפה מלאה כשהמחלקה active מופעלת מהגלילה */
+.reveal-section.active, 
+.reveal-grid.active, 
+.stagger-item.active, 
+.fade-up.active {
+    opacity: 1 !important; 
+    transform: translate(0, 0) scale(1) !important; 
+    filter: blur(0) !important;
 }
-.slide-from-right.active { opacity: 1; transform: translateX(0); filter: blur(0); }
+
+.slide-from-left.active, 
+.slide-from-right.active {
+    opacity: 1 !important; 
+    transform: translate(0, 0) !important; 
+    filter: blur(0) !important;
+}
+
+/* דיליי מיוחד להופעת הפרויקטים בגריד כדי שיעלו אחד-אחד */
+.reveal-grid.active .stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.reveal-grid.active .stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.reveal-grid.active .stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.reveal-grid.active .stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.reveal-grid.active .stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.reveal-grid.active .stagger-item:nth-child(6) { transition-delay: 0.6s; }
+.reveal-grid.active .stagger-item:nth-child(7) { transition-delay: 0.7s; }
+.reveal-grid.active .stagger-item:nth-child(8) { transition-delay: 0.8s; }
+
 
 /* =========================================
-   10. LANGUAGE SUPPORT (RTL & HEBREW)
-   ========================================= */
-
-body.rtl {
-    direction: rtl;
-    text-align: right;
-    font-family: 'Heebo', 'Rubik', sans-serif !important;
-}
-
-body.rtl h1, body.rtl h2, body.rtl h3, body.rtl h4, body.rtl h5 {
-    font-weight: 700 !important; 
-    letter-spacing: normal !important;
-}
-body.rtl .display-3 { font-size: 4rem !important; }
-body.rtl .display-6 { font-size: 3.2rem !important; }
-body.rtl h2.projects-title { font-size: 3.5rem !important; }
-
-body.rtl .text-start, body.rtl .text-lg-start { text-align: right !important; }
-body.rtl .text-md-end { text-align: left !important; }
-
-body.rtl .navbar-nav { padding-right: 0; }
-body.rtl .me-2, body.rtl .me-3 { margin-left: 0.5rem !important; margin-right: 0 !important; }
-body.rtl .ms-2 { margin-right: 0.5rem !important; margin-left: 0 !important; }
-
-body.rtl .btn-glass i, body.rtl .pill-btn i { margin-left: 8px; margin-right: 0; }
-body.rtl .fa-arrow-right { transform: rotate(180deg); }
-
-/* RTL Contact Header Fix */
-body.rtl .big-contact-header {
-    left: auto; right: -2%;
-    transform: translateX(100%);
-}
-body.rtl .big-contact-header.active { transform: translateX(0); }
-
-/* RTL Form Fix */
-body.rtl .input-group-minimal label {
-    left: auto; right: 0; transform-origin: right top;
-}
-
-/* =========================================
-   11. MOBILE RESPONSIVENESS
+   10. MOBILE RESPONSIVENESS
    ========================================= */
 
 @media (max-width: 991px) {
-    /* Align everything to standard flow on mobile */
+    /* יישור לשמאל במסכים קטנים (ומניעת בלאגן ב-RTL) */
     body, section, .container, .row, .col-lg-5, .col-lg-6, .col-lg-3, .col-lg-9,
     h1, h2, h3, h4, h5, p, .projects-header {
         text-align: left !important;
@@ -618,7 +565,6 @@ body.rtl .input-group-minimal label {
     }
 
     .row { flex-direction: column !important; }
-    
     .d-flex:not(.flex-column) { justify-content: flex-start !important; }
     body.rtl .d-flex:not(.flex-column) { justify-content: flex-start !important; }
 
@@ -632,22 +578,22 @@ body.rtl .input-group-minimal label {
     /* Cards */
     .glass-card, .glass-square-card { align-items: flex-start !important; text-align: left !important; }
     body.rtl .glass-card, body.rtl .glass-square-card { text-align: right !important; }
-    .project-card-wrapper .glass-square-card { align-items: center !important; text-align: center !important; } /* Projects remain centered */
+    .project-card-wrapper .glass-square-card { align-items: center !important; text-align: center !important; }
     
     .title-separator { margin: 20px 0 !important; }
     .projects-header { padding: 40px 0; }
     
-    /* Animations on mobile (Simplified) */
-    .slide-from-left, .slide-from-right {
-        transform: translateY(50px); opacity: 0; filter: blur(0);
+    /* ביטול אנימציות צד שעלולות לחתוך מסך במובייל */
+    html.js-loaded .slide-from-left, 
+    html.js-loaded .slide-from-right {
+        transform: translateY(30px); opacity: 0; filter: blur(0);
     }
-    body.rtl .slide-from-left, body.rtl .slide-from-right { transform: translateY(50px); }
-
+    
     /* Contact Section Mobile */
     .editorial-contact-section { padding: 80px 0; min-height: auto; }
     
     .big-contact-header {
-        font-size: 35vw; /* Smaller on mobile but still big */
+        font-size: 35vw; 
         top: 2%; left: 0;
         transform: translateX(-50px);
     }
