@@ -3,25 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Lihi Harary | Portfolio</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-
     <script src="https://www.goat1000.com/tagcanvas.min.js"></script>
-
     <style>
-        /* Enlarge the SYNAPSE logo inside the existing circle */
-
         .project-circle-img.synapse-logo-circle {
             background-size: 160% !important;
             background-position: center center !important;
         }
-
-        /* SYNAPSE project details */
 
         .synapse-layout {
             display: grid;
@@ -80,9 +72,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="background-gradient">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -90,114 +80,63 @@
     </div>
 
     <!-- Navigation -->
-
     <nav class="navbar navbar-expand-lg fixed-top glass-nav">
         <div class="container">
-
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-brand border p-1 rounded-circle m-0" href="#">LH</a>
-
-                <button
-                    id="lang-toggle"
+                <button id="lang-toggle"
                     class="btn border-0 p-0 d-flex flex-column align-items-center justify-content-center"
                     style="color: var(--text-dark); background: transparent; min-width: 40px; height: auto;">
-
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.8"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        style="margin-bottom: 2px;">
-
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
                         <circle cx="12" cy="12" r="10"></circle>
                         <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"></path>
                     </svg>
-
-                    <span
-                        id="lang-text"
-                        style="font-size: 0.7rem; font-weight: 400; font-family: sans-serif; line-height: 1;">
-                        EN
-                    </span>
+                    <span id="lang-text"
+                        style="font-size: 0.7rem; font-weight: 400; font-family: sans-serif; line-height: 1;">EN</span>
                 </button>
             </div>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home" data-lang="nav_home">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about" data-lang="nav_about">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects-section" data-lang="nav_projects">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact" data-lang="nav_contact">CONTACT</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home" data-lang="nav_home">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-lang="nav_about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects-section" data-lang="nav_projects">PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-lang="nav_contact">CONTACT</a></li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
     <!-- Hero -->
-
     <header id="home" class="hero-section">
         <div class="container hero-container-limit position-relative z-2">
             <div class="row align-items-center justify-content-between gap-5">
-
                 <div class="col-lg-5 text-start">
-                    <h1
-                        class="display-3 fw-bold tracking-wide text-dark-blue"
-                        data-lang="name_main">
-                        LIHI HARARY
-                    </h1>
-
-                    <h2
-                        class="fw-light mb-4 text-uppercase text-gradient-main"
-                        style="letter-spacing: 3px;"
-                        data-lang="hero_subtitle">
-                        Design &amp; Technology
-                    </h2>
-
+                    <h1 class="display-3 fw-bold tracking-wide text-dark-blue" data-lang="name_main">LIHI HARARY</h1>
+                    <h2 class="fw-light mb-4 text-uppercase text-gradient-main"
+                        style="letter-spacing: 3px;" data-lang="hero_subtitle">Design &amp; Technology</h2>
                     <p class="lead mb-5 hero-text" data-lang="hero_text">
                         UX/UI Designer with a B.A. in Instructional Technologies and a
                         foundation in front-end development. Designing intuitive interfaces,
                         clear user flows, and scalable design systems.
                     </p>
-
                     <div class="d-flex gap-3 justify-content-start">
                         <a href="#projects-section" class="btn-glass" data-lang="btn_projects">Projects</a>
                         <a href="#about" class="btn-glass" data-lang="btn_about">About Me</a>
                         <a href="#contact" class="btn-glass btn-glass-primary" data-lang="btn_contact">Contact Me</a>
                     </div>
                 </div>
-
-                <div
-                    class="col-lg-5 d-flex justify-content-center align-items-center position-relative"
-                    style="height: 500px;">
-
+                <div class="col-lg-5 d-flex justify-content-center align-items-center position-relative" style="height: 500px;">
                     <div id="myCanvasContainer">
                         <canvas width="500" height="500" id="myCanvas">
                             <p>Canvas not supported</p>
                         </canvas>
                     </div>
-
                     <div id="tags" style="display: none;">
                         <ul>
                             <li><a href="#"><img src="Media/figmaicon.png" width="60" height="60" alt="Figma"></a></li>
@@ -209,7 +148,6 @@
                             <li><a href="#"><img src="Media/Articulate Storyline 360icon.jpg" width="60" height="60" alt="Storyline"></a></li>
                             <li><a href="#"><img src="Media/unityicon.png" width="60" height="60" alt="Unity"></a></li>
                             <li><a href="#"><img src="Media/chatgpticon.png" width="60" height="60" alt="AI"></a></li>
-
                             <li><a href="#"><img src="Media/figmaicon.png" width="60" height="60" alt="Figma"></a></li>
                             <li><a href="#"><img src="Media/pyton.png" width="60" height="60" alt="Python"></a></li>
                             <li><a href="#"><img src="Media/illustratoricon.png" width="60" height="60" alt="Illustrator"></a></li>
@@ -221,78 +159,40 @@
                             <li><a href="#"><img src="Media/chatgpticon.png" width="60" height="60" alt="AI"></a></li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
-
-        <div
-            class="scroll-down text-center w-100"
-            style="position: absolute; bottom: 30px;">
-            <a href="#about" class="text-dark-blue">
-                <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
-            </a>
+        <div class="scroll-down text-center w-100" style="position: absolute; bottom: 30px;">
+            <a href="#about" class="text-dark-blue"><i class="fas fa-chevron-down fa-2x animate-bounce"></i></a>
         </div>
     </header>
 
     <!-- About -->
-
     <section id="about">
         <div class="container">
             <div class="row justify-content-center g-4">
-
                 <div class="col-lg-3 col-xl-3 d-flex align-items-stretch slide-from-left">
                     <div class="glass-card h-100 text-start d-flex flex-column align-items-start justify-content-center py-4 w-100 px-4">
-
                         <div class="profile-circle mb-3 align-self-center">
                             <img src="Media/ITSME.png" alt="Lihi Harary" class="profile-img">
                         </div>
-
-                        <h3
-                            class="fw-bold mb-1 text-dark-blue w-100 text-start"
-                            data-lang="card_name">
-                            Lihi Harary
-                        </h3>
-
-                        <p
-                            class="text-gradient-main small fw-bold letter-spacing-2 mb-4 text-start"
-                            data-lang="card_role">
-                            UX/UI DESIGN &amp; DEV
-                        </p>
-
-                        <p
-                            class="small fw-bold text-dark-blue mb-4"
-                            data-lang="matrix_role">
-                            UX/UI Designer at Matrix
-                        </p>
-
+                        <h3 class="fw-bold mb-1 text-dark-blue w-100 text-start" data-lang="card_name">Lihi Harary</h3>
+                        <p class="text-gradient-main small fw-bold letter-spacing-2 mb-4 text-start" data-lang="card_role">UX/UI DESIGN &amp; DEV</p>
+                        <p class="small fw-bold text-dark-blue mb-4" data-lang="matrix_role">UX/UI Designer at Matrix</p>
                         <div class="mt-auto w-100 d-flex flex-column gap-2">
-                            <a
-                                href="Media/LihiMalcaHarary _CV.pdf"
-                                download="LihiMalcaHarary _CV.pdf"
-                                class="btn-glass w-100 py-2 small">
-
+                            <a href="images/LihiMalcaHarary%20_CV.pdf"
+                                download="LihiMalcaHarary _CV.pdf" class="btn-glass w-100 py-2 small">
                                 <i class="fas fa-file-download me-2"></i>
                                 <span data-lang="btn_cv">Download CV</span>
                             </a>
-
-                            <a
-                                href="#contact"
-                                class="btn-glass btn-glass-primary w-100 py-2 small"
-                                data-lang="btn_contact">
-                                Contact Me
-                            </a>
+                            <a href="#contact" class="btn-glass btn-glass-primary w-100 py-2 small" data-lang="btn_contact">Contact Me</a>
                         </div>
-
                     </div>
                 </div>
-
                 <div class="col-lg-9 col-xl-9 slide-from-right">
                     <div class="glass-card h-100 py-4 px-3 px-lg-5 d-flex flex-column justify-content-center text-start">
-
                         <div class="mb-4">
                             <h4 class="fw-bold mb-2 text-dark-blue" data-lang="about_title">About Me</h4>
-
                             <p class="text-muted fs-6 lh-base mb-0" data-lang="about_text">
                                 UX/UI Designer with a B.A. in Instructional Technologies and a
                                 foundation in front-end development. I design intuitive interfaces
@@ -301,396 +201,224 @@
                                 attention to detail, and AI tools to support an efficient design process.
                             </p>
                         </div>
-
                         <h5 class="text-gradient-main mb-3 d-flex align-items-center gap-2 small fw-bold text-uppercase">
                             <i class="fas fa-layer-group"></i>
                             <span data-lang="core_competencies">Core Competencies</span>
                         </h5>
-
                         <div class="row g-3 mb-3">
-
                             <div class="col-md-3 col-sm-6">
                                 <div class="competency-card glass-inner py-3 text-start px-3">
-                                    <div class="competency-icon mb-2 mx-0">
-                                        <i class="fas fa-pen-nib"></i>
-                                    </div>
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-pen-nib"></i></div>
                                     <h6 class="fw-bold mb-1" data-lang="comp_ux">UX/UI Design</h6>
-                                    <p class="text-muted small" data-lang="desc_ux">
-                                        Wireframing, prototyping, design systems, and designing intuitive interfaces.
-                                    </p>
+                                    <p class="text-muted small" data-lang="desc_ux">Wireframing, prototyping, design systems, and designing intuitive interfaces.</p>
                                 </div>
                             </div>
-
                             <div class="col-md-3 col-sm-6">
                                 <div class="competency-card glass-inner py-3 text-start px-3">
-                                    <div class="competency-icon mb-2 mx-0">
-                                        <i class="fas fa-gamepad"></i>
-                                    </div>
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-gamepad"></i></div>
                                     <h6 class="fw-bold mb-1" data-lang="comp_game">Game Dev</h6>
-                                    <p class="text-muted small" data-lang="desc_game">
-                                        Interactive experiences in Unity &amp; C#.
-                                    </p>
+                                    <p class="text-muted small" data-lang="desc_game">Interactive experiences in Unity &amp; C#.</p>
                                 </div>
                             </div>
-
                             <div class="col-md-3 col-sm-6">
                                 <div class="competency-card glass-inner py-3 text-start px-3">
-                                    <div class="competency-icon mb-2 mx-0">
-                                        <i class="fas fa-code"></i>
-                                    </div>
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-code"></i></div>
                                     <h6 class="fw-bold mb-1" data-lang="comp_web">Web Dev</h6>
-                                    <p class="text-muted small" data-lang="desc_web">
-                                        Responsive websites using HTML, CSS, JS.
-                                    </p>
+                                    <p class="text-muted small" data-lang="desc_web">Responsive websites using HTML, CSS, JS.</p>
                                 </div>
                             </div>
-
                             <div class="col-md-3 col-sm-6">
                                 <div class="competency-card glass-inner py-3 text-start px-3">
-                                    <div class="competency-icon mb-2 mx-0">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
+                                    <div class="competency-icon mb-2 mx-0"><i class="fas fa-graduation-cap"></i></div>
                                     <h6 class="fw-bold mb-1" data-lang="comp_edu">E-Learning</h6>
-                                    <p class="text-muted small" data-lang="desc_edu">
-                                        Instructional design with Storyline &amp; Rise.
-                                    </p>
+                                    <p class="text-muted small" data-lang="desc_edu">Instructional design with Storyline &amp; Rise.</p>
                                 </div>
                             </div>
-
                         </div>
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="competency-card glass-inner py-3 d-flex align-items-center justify-content-between px-4 text-start">
-
                                     <div class="d-flex align-items-center gap-3">
-                                        <div class="competency-icon m-0">
-                                            <i class="fas fa-university"></i>
-                                        </div>
-
+                                        <div class="competency-icon m-0"><i class="fas fa-university"></i></div>
                                         <div>
-                                            <h6 class="fw-bold mb-0" data-lang="degree_title">
-                                                B.A. in Instructional Technologies
-                                            </h6>
-                                            <small class="text-secondary" data-lang="degree_inst">
-                                                Holon Institute of Technology (HIT)
-                                            </small>
+                                            <h6 class="fw-bold mb-0" data-lang="degree_title">B.A. in Instructional Technologies</h6>
+                                            <small class="text-secondary" data-lang="degree_inst">Holon Institute of Technology (HIT)</small>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Project cards -->
-
     <section id="projects-section" class="projects-section py-5 position-relative overflow-hidden">
-
         <div class="container position-relative z-2 mb-0.5 reveal-section">
             <div class="projects-header text-start">
-
                 <h2 class="projects-title text-dark-blue">
                     <span data-lang="proj_title_sel">Selected</span>
                     <span class="text-gradient-main" data-lang="proj_title_proj">Projects</span>
                 </h2>
-
                 <div class="title-separator ms-0"></div>
-
                 <p class="projects-subtitle text-muted" data-lang="proj_subtitle">
                     A selection of interactive, design-driven and technology-based projects
                 </p>
-
             </div>
         </div>
-
         <div class="container position-relative z-2">
             <div id="projects-grid" class="row justify-content-start g-4 g-lg-5 reveal-grid">
-
                 <!-- 01. SYNAPSE -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('ai-platform')"
-                    role="button"
-                    tabindex="0"
-                    aria-label="SYNAPSE"
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
+                    onclick="openProject('ai-platform')" role="button" tabindex="0" aria-label="SYNAPSE"
                     onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openProject('ai-platform'); }">
-
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
-                            <div
-                                class="project-circle-img synapse-logo-circle"
-                                style="background-image: url('Media/SynapseLogo.jpeg');">
-
-                                <div class="circle-overlay">
-                                    <h6 class="fw-bold m-0 text-uppercase">SYNAPSE</h6>
-                                </div>
+                            <div class="project-circle-img synapse-logo-circle" style="background-image: url('Media/SynapseLogo.jpeg');">
+                                <div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase">SYNAPSE</h6></div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">01</span>
-                                <span
-                                    class="project-cat d-block small text-muted"
-                                    data-lang="cat_ai_systems">
-                                    AI Systems Project
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_ai_systems">AI Systems Project</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 02. Back-Up, Product Design -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('back-up')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('back-up')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
-                            <div
-                                class="project-circle-img"
+                            <div class="project-circle-img"
                                 style="background-image: url('Media/buckupbg.png'); background-size: contain !important; background-position: center center !important; background-repeat: no-repeat !important; background-color: #fff;">
-
                                 <div class="circle-overlay">
-                                    <img
-                                        src="Media/Cognyte_Logo.svg.png"
-                                        alt="Cognyte"
-                                        class="img-fluid mb-2"
-                                        style="max-width: 50px;">
-
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="bu_card_title">
-                                        Back-Up
-                                    </h6>
+                                    <img src="Media/Cognyte_Logo.svg.png" alt="Cognyte" class="img-fluid mb-2" style="max-width: 50px;">
+                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="bu_card_title">Back-Up</h6>
                                 </div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">02</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_product">
-                                    Product Design
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_product">Product Design</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 03. Magic & Match -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('magic-match')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('magic-match')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
                             <div class="project-circle-img" style="background-image: url('Media/magicandmatchbg.png');">
                                 <div class="circle-overlay">
-                                    <img
-                                        src="Media/magicandmatch.png"
-                                        alt="Logo"
-                                        class="img-fluid mb-2"
-                                        style="max-width: 50px;">
-
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="mm_card_title">
-                                        Magic &amp; Match
-                                    </h6>
+                                    <img src="Media/magicandmatch.png" alt="Logo" class="img-fluid mb-2" style="max-width: 50px;">
+                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="mm_card_title">Magic &amp; Match</h6>
                                 </div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">03</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_gamedev">
-                                    Game Dev
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_gamedev">Game Dev</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 04. Ruach Gabit, Web Dev -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('ruach-gabit')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('ruach-gabit')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
                             <div class="project-circle-img" style="background-image: url('Media/logo.png');">
-                                <div class="circle-overlay">
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="rg_card_title">
-                                        Ruach Gabit
-                                    </h6>
-                                </div>
+                                <div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="rg_card_title">Ruach Gabit</h6></div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">04</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_webdev">
-                                    Web Dev
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_webdev">Web Dev</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 05. MushBot, AI Tool -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('mushbot')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('mushbot')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
                             <div class="project-circle-img" style="background-image: url('Media/mushbotBG.png');">
-                                <div class="circle-overlay">
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="mb_card_title">
-                                        MushBot
-                                    </h6>
-                                </div>
+                                <div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="mb_card_title">MushBot</h6></div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">05</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_aitool">
-                                    AI Tool
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_aitool">AI Tool</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 06. Pastella, Mobile App -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('pastella')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('pastella')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
-                            <div
-                                class="project-circle-img"
+                            <div class="project-circle-img"
                                 style="background-image: url('Media/OpeningPage.png'); background-size: cover; background-position: center center;">
-
-                                <div class="circle-overlay">
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="pa_card_title">
-                                        Pastella
-                                    </h6>
-                                </div>
+                                <div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="pa_card_title">Pastella</h6></div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">06</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_mobile">
-                                    Mobile App
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_mobile">Mobile App</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 07. E-Learning -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('elearning')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('elearning')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
                             <div class="project-circle-img" style="background-image: url('Media/ELEARNINGBG.png');">
-                                <div class="circle-overlay">
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="el_card_title">
-                                        Growing Plants
-                                    </h6>
-                                </div>
+                                <div class="circle-overlay"><h6 class="fw-bold m-0 text-uppercase" data-lang="el_card_title">Growing Plants</h6></div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">07</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_elearning">
-                                    E-Learning
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_elearning">E-Learning</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
 
                 <!-- 08. Branding -->
-
-                <div
-                    class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item"
-                    onclick="openProject('oreo')">
-
+                <div class="col-lg-3 col-md-6 col-12 project-card-wrapper stagger-item" onclick="openProject('oreo')">
                     <div class="glass-square-card">
                         <div class="card-inner-content">
-
                             <div class="project-circle-img" style="background-image: url('Media/aliceinworderlandBG.png');">
                                 <div class="circle-overlay">
-                                    <img
-                                        src="Media/aliceinworderlandLOGO.png"
-                                        alt="Logo"
-                                        class="img-fluid mb-2"
-                                        style="max-width: 50px;">
-
-                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="or_card_title">
-                                        Packaging
-                                    </h6>
+                                    <img src="Media/aliceinworderlandLOGO.png" alt="Logo" class="img-fluid mb-2" style="max-width: 50px;">
+                                    <h6 class="fw-bold m-0 text-uppercase" data-lang="or_card_title">Packaging</h6>
                                 </div>
                             </div>
-
                             <div class="mt-3 text-start">
                                 <span class="project-number">08</span>
-                                <span class="project-cat d-block small text-muted" data-lang="cat_branding">
-                                    Branding
-                                </span>
+                                <span class="project-cat d-block small text-muted" data-lang="cat_branding">Branding</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Project details -->
-
     <div id="project-details-container" class="project-details-overlay d-none">
-
         <!-- Magic & Match -->
-
         <div id="magic-match-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_gamedev">Game Development</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="mm_title">Magic &amp; Match</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="mm_subtitle">Developed in Unity &amp; C# | Custom Game Generator</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
                         <p class="mt-2" data-lang="mm_desc1">An interactive 2D educational matching game, fully designed and programmed in Unity with C#.</p>
@@ -699,21 +427,18 @@
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="mm_header_goal">Goal &amp; Uniqueness</h5>
                         <p class="mt-2" data-lang="mm_desc4">The game blends learning with interactivity, as players match enchanted clouds to lift a floating house back into the sky.</p>
                     </div>
-
                     <div class="mb-4">
                         <a href="https://www.figma.com/proto/HCdMpr9q2Zk4ZA4VC6ApWR/%D7%90%D7%A4%D7%99%D7%95%D7%9F-Magic---Match" target="_blank" class="text-muted text-decoration-none">
                             <i class="fab fa-figma me-2"></i>
                             <span data-lang="link_figma">Link for Figma Wireframes</span>
                         </a>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">C#</span>
                         <span class="tech-tag">Unity</span>
                         <span class="tech-tag">Figma</span>
                         <span class="tech-tag">Illustrator</span>
                     </div>
-
                     <div class="mt-auto">
                         <a href="https://triangle.telem-hit.net/2025/MagicMatch_LihiRazKoral/Game" target="_blank" class="btn btn-glass-primary w-100">
                             <span data-lang="btn_view_live">View Live Project</span>
@@ -721,71 +446,55 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
                         <div id="magicMatchGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
-
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="0" class="active"></button>
                                 <button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="1"></button>
                                 <button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="2"></button>
                                 <button type="button" data-bs-target="#magicMatchGallery" data-bs-slide-to="3"></button>
                             </div>
-
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="mm_gal_1">Custom Game Generator</h5>
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_1">Custom Game Generator</h5></div>
                                         <video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;">
                                             <source src="Media/meholel.mp4" type="video/mp4">
                                         </video>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="mm_gal_2">Opening Cinematic</h5>
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_2">Opening Cinematic</h5></div>
                                         <video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;">
                                             <source src="Media/OpeningCinematicc.mp4" type="video/mp4">
                                         </video>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="mm_gal_3">Core Gameplay</h5>
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_3">Core Gameplay</h5></div>
                                         <video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;">
                                             <source src="Media/thegame.mp4" type="video/mp4">
                                         </video>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="mm_gal_4">Ending &amp; Feedback</h5>
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="mm_gal_4">Ending &amp; Feedback</h5></div>
                                         <video autoplay muted loop playsinline class="shadow-lg rounded" style="max-height: 55vh; max-width: 90%;">
                                             <source src="Media/Endinganimationn.mp4" type="video/mp4">
                                         </video>
                                     </div>
                                 </div>
                             </div>
-
                             <button class="carousel-control-prev" type="button" data-bs-target="#magicMatchGallery" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#magicMatchGallery" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -793,20 +502,16 @@
         </div>
 
         <!-- Ruach Gabit -->
-
         <div id="ruach-gabit-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_webdev">Web Development</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="rg_title">Ruach Gabit</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="rg_subtitle">Social-Impact Website</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
                         <p class="mt-2" data-lang="rg_desc1">“Ruach Gabit” , A Social-Impact Website Supporting Independent Businesses During Iron Swords War.</p>
@@ -814,20 +519,17 @@
                         <p data-lang="rg_desc3">The website was built entirely with HTML, CSS, and JavaScript, combining responsive web design with interactive front-end functionality.</p>
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="rg_header_feat">Interactive Features</h5>
                         <p class="mt-2" data-lang="rg_desc4">Includes interactive registration form that allows business owners to sign up for the platform , dynamically adapting to user input through JavaScript event-driven logic.</p>
-
                         <a href="https://appdani.github.io/volForm/interactive-form/volForm.html" target="_blank" class="text-muted small">
                             <i class="fas fa-file-signature me-1"></i>
                             <span data-lang="link_form">View Interactive Form</span>
                         </a>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Illustrator</span>
                     </div>
-
                     <div class="mt-auto">
                         <a href="https://ruach-gabit-project.onrender.com/" target="_blank" class="btn btn-glass-primary w-100">
                             <span data-lang="btn_view_live">View Live Project</span>
@@ -835,7 +537,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center p-4">
                         <video autoplay muted loop playsinline class="w-100 shadow-lg" style="border-radius: 15px;">
@@ -847,20 +548,16 @@
         </div>
 
         <!-- MushBot -->
-
         <div id="mushbot-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_aidev">AI Development</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2024</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="mb_title">MushBot</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="mb_subtitle">AI-Powered Mushroom Identification</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
                         <p class="mt-2" data-lang="mb_desc1">Mushbot bridges the gap between nature and technology to help travelers identify mushrooms safely.</p>
@@ -871,14 +568,12 @@
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="header_tools">Tools &amp; Technologies</h5>
                         <p class="mt-2" data-lang="mb_desc6">Built entirely with HTML, CSS, and JavaScript. <br> integrated multiple AI and Web tools including Kindwise API, ml5.js, Gemini, and Suno AI.</p>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Kindwise API</span>
                         <span class="tech-tag">ml5.js</span>
                         <span class="tech-tag">Gen AI</span>
                     </div>
-
                     <div class="mt-auto">
                         <a href="https://mushbot.onrender.com/" target="_blank" class="btn btn-glass-primary w-100">
                             <span data-lang="btn_view_live">View Live Project</span>
@@ -886,7 +581,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center p-4">
                         <video autoplay muted loop playsinline class="w-100 shadow-lg" style="border-radius: 15px;">
@@ -898,20 +592,16 @@
         </div>
 
         <!-- E-Learning -->
-
         <div id="elearning-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_instdesign">Instructional Design</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2025</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="el_title">Growing &amp; Caring for Plants</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="el_subtitle">Interactive Module for Children</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
                         <p class="mt-2" data-lang="el_desc1">This interactive e-learning designed specifically for young children to introduce the three essential conditions for plant growth: soil, water, and sunlight.</p>
@@ -920,13 +610,11 @@
                         <p class="mt-2" data-lang="el_desc3">All visual elements,illustrations, icons, and layout,were fully created in <strong>Adobe Illustrator</strong>, using a clean, playful, and age-appropriate vector style.</p>
                         <p data-lang="el_desc4">The module was built in <strong>Articulate Storyline 360</strong>, combining instructional design principles with custom visual storytelling.</p>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">Articulate Storyline 360</span>
                         <span class="tech-tag">Adobe Illustrator</span>
                         <span class="tech-tag">Instructional Design</span>
                     </div>
-
                     <div class="mt-auto">
                         <a href="https://360.articulate.com/review/content/fbfcc041-d87a-441d-8987-96591393ee15/review" target="_blank" class="btn btn-glass-primary w-100">
                             <span data-lang="btn_view_live">View Live Project</span>
@@ -934,11 +622,9 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
                         <div id="elearningGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
-
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="0" class="active"></button>
                                 <button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="1"></button>
@@ -953,7 +639,6 @@
                                 <button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="10"></button>
                                 <button type="button" data-bs-target="#elearningGallery" data-bs-slide-to="11"></button>
                             </div>
-
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="Media/ELEARNING1.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 1"></div></div>
                                 <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="Media/ELEARNING2.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 2"></div></div>
@@ -968,14 +653,12 @@
                                 <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="Media/ELEARNING11.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 11"></div></div>
                                 <div class="carousel-item h-100"><div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5"><img src="Media/ELEARNING12.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;" alt="E-Learning Screen 12"></div></div>
                             </div>
-
                             <button class="carousel-control-prev" type="button" data-bs-target="#elearningGallery" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#elearningGallery" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -983,20 +666,16 @@
         </div>
 
         <!-- Oreo -->
-
         <div id="oreo-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_branding">Brand Identity</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2025</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="or_title">Oreo Rebranding Project</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="or_subtitle">Visual Identity &amp; Packaging Design</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="header_about_proj">About the Project</h5>
                         <p class="mt-2" data-lang="or_desc1">This project reimagines the classic Oreo cookie through a creative rebranding process inspired by storytelling and user experience principles.</p>
@@ -1006,100 +685,78 @@
                         <p data-lang="or_desc4">All visual elements were created in Adobe Illustrator, following brand and print standards for real-world packaging production, including front, back, and side panels with nutritional information and barcodes.</p>
                         <p data-lang="or_desc5">The project demonstrates a strong sense of visual strategy, brand storytelling, and attention to detail, emphasizing how design can connect emotion, nostalgia, and product experience.</p>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">Adobe Illustrator</span>
                         <span class="tech-tag">Branding</span>
                         <span class="tech-tag">Packaging Design</span>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side overflow-auto h-100 bg-glass-dark">
                     <div class="w-100 d-flex justify-content-center p-4">
-                        <img
-                            src="Media/aliceinworderland.png"
-                            class="shadow-lg rounded img-fluid"
-                            style="width: 100%; height: auto;"
-                            alt="Oreo Rebranding Vertical">
+                        <img src="Media/aliceinworderland.png" class="shadow-lg rounded img-fluid" style="width: 100%; height: auto;" alt="Oreo Rebranding Vertical">
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Back-Up -->
-
         <div id="back-up-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_product">Product Design &amp; UX</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2025</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="bu_title">Back-Up: Salesforce Companion</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="bu_subtitle">Smart Performance Support for Cognyte</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="bu_h1">1. Organization &amp; The Challenge</h5>
                         <p class="mt-2" data-lang="bu_p1"><strong>Client:</strong> Cognyte (NASDAQ: CGNT). Context: A complex B2G sales environment with long cycles.</p>
                         <p data-lang="bu_p2"><strong>The Problem:</strong> Despite MEDDPICC training, sales reps viewed Salesforce as a bureaucratic burden ("policing tool"), leading to poor data quality and forcing management to rely on guesswork for forecasting.</p>
-
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="bu_h2">2. The Solution: Back-Up</h5>
                         <p class="mt-2" data-lang="bu_p3">Instead of traditional training, we created a smart performance-support overlay that turns Salesforce into a proactive companion.</p>
-
                         <strong data-lang="bu_strong1">The Sales Representative’s Perspective (Efficiency &amp; Trust):</strong>
-
                         <ul class="list-unstyled mt-2 small text-secondary">
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li1"><strong>Pre-Meeting:</strong> A "Smart Cheat-Sheet" with tailored critical questions.</span></li>
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li2"><strong>During Meeting:</strong> Distraction-free interface to focus on the conversation.</span></li>
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li3"><strong>AI Copilot:</strong> Listens, analyzes, and auto-populates CRM fields. Removes manual grunt work.</span></li>
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li4"><strong>Data Control:</strong> Clear separation between private notes and public/managerial data.</span></li>
                         </ul>
-
                         <strong data-lang="bu_strong2">The Manager’s Perspective (Control &amp; Visibility):</strong>
-
                         <ul class="list-unstyled mt-2 small text-secondary">
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li5"><strong>Instant Visualization:</strong> "Color Wheels" show deal health at a glance (identifying missing data).</span></li>
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li6"><strong>Smart Gates:</strong> Identifies Red status (missing criteria) and prevents premature advancement.</span></li>
                             <li class="mb-2"><i class="fas fa-check text-gradient-main me-2"></i><span data-lang="bu_li7"><strong>Insights:</strong> Analyzes bottlenecks for reliable forecasting.</span></li>
                         </ul>
-
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="bu_h3">3. The Process</h5>
                         <p class="mt-2" data-lang="bu_p4">We shifted the mindset from "Enforcement" to "Performance Support". Key elements included:</p>
-
                         <ul class="list-unstyled mt-2 small text-secondary">
                             <li class="mb-2"><i class="fas fa-arrow-right text-gradient-main me-2"></i><span data-lang="bu_li8"><strong>User Research:</strong> Identifying the friction points in the current workflow.</span></li>
                             <li class="mb-2"><i class="fas fa-arrow-right text-gradient-main me-2"></i><span data-lang="bu_li9"><strong>"Safe Space" Principle:</strong> Architectural separation between drafts and public view to build trust.</span></li>
                             <li class="mb-2"><i class="fas fa-arrow-right text-gradient-main me-2"></i><span data-lang="bu_li10"><strong>Modular Development:</strong> Scalable from Logic Wizard to advanced AI Copilot.</span></li>
                         </ul>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">AI Development (Lovable)</span>
                         <span class="tech-tag">UX/UI</span>
                         <span class="tech-tag">Behavioral Design</span>
                         <span class="tech-tag">MEDDPICC Methodology</span>
                     </div>
-
                     <div class="d-flex gap-3 w-100 mt-auto">
                         <a href="https://command-deal-nexus.lovable.app/" target="_blank" class="btn btn-glass-primary flex-fill text-center d-flex justify-content-center align-items-center">
                             <span data-lang="btn_manager_view">Manager View</span>
                             <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
-
                         <a href="https://cognyte-dealflow.lovable.app" target="_blank" class="btn btn-glass flex-fill text-center d-flex justify-content-center align-items-center">
                             <span data-lang="btn_rep_view">Sales Representative View</span>
                             <i class="fas fa-external-link-alt ms-2"></i>
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
                         <div id="backupGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
-
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#backupGallery" data-bs-slide-to="0" class="active"></button>
                                 <button type="button" data-bs-target="#backupGallery" data-bs-slide-to="1"></button>
@@ -1107,7 +764,6 @@
                                 <button type="button" data-bs-target="#backupGallery" data-bs-slide-to="3"></button>
                                 <button type="button" data-bs-target="#backupGallery" data-bs-slide-to="4"></button>
                             </div>
-
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
@@ -1118,7 +774,6 @@
                                         <img src="Media/manager1.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;">
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                                         <div class="text-center mb-3 px-5 position-relative z-2">
@@ -1128,7 +783,6 @@
                                         <img src="Media/manager2.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;">
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                                         <div class="text-center mb-3 px-5 position-relative z-2">
@@ -1138,7 +792,6 @@
                                         <img src="Media/Salesrepresentativedurongnoai.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;">
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                                         <div class="text-center mb-3 px-5 position-relative z-2">
@@ -1148,7 +801,6 @@
                                         <img src="Media/Sales representativepregreennoai.png" class="img-fluid shadow-lg rounded" style="max-height: 55vh; max-width: 90%; object-fit: contain;">
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
                                         <div class="text-center mb-3 px-5 position-relative z-2">
@@ -1159,14 +811,12 @@
                                     </div>
                                 </div>
                             </div>
-
                             <button class="carousel-control-prev" type="button" data-bs-target="#backupGallery" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#backupGallery" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -1174,32 +824,25 @@
         </div>
 
         <!-- Pastella -->
-
         <div id="pastella-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
             <button class="close-project-btn" onclick="closeProject()"><i class="fas fa-times"></i></button>
-
             <div class="row g-0 h-100">
                 <div class="col-lg-6 p-5 d-flex flex-column overflow-auto h-100 content-side">
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <span class="tech-tag" data-lang="tag_mobile">Mobile App Design</span>
                         <span class="text-muted"><i class="far fa-calendar-alt"></i> 2026</span>
                     </div>
-
                     <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="pa_title">Pastella</h2>
                     <p class="text-gradient-main mb-4 small fw-bold" data-lang="pa_subtitle">Mobile App for a Smart Pasta Maker</p>
-
                     <div class="mb-4 description-text flex-grow-1">
                         <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="pa_h1">Concept &amp; UX Process</h5>
                         <p class="mt-2" data-lang="pa_desc1">Pastella is a mobile app concept designed for a home pasta-making machine, created to make the pasta preparation process clearer, simpler, and more enjoyable.</p>
                         <p data-lang="pa_desc2">The project was designed from scratch in Figma, from information architecture and user flow to a fully interactive prototype. The goal was to simulate the complete user journey, reduce clicks, and lower visual load.</p>
-
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="pa_h2">Visual Language</h5>
                         <p class="mt-2" data-lang="pa_desc3">The UI language is culinary, elegant, and minimal. Delicate line-art illustrations, deep burgundy, and a soft cream background create clear contrast and high readability while working in the kitchen.</p>
-
                         <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="pa_h3">Generative AI Process</h5>
                         <p class="mt-2" data-lang="pa_desc4">Generative AI tools were used to create the graphic assets, including the machine, pasta discs, and ingredients. Through precise prompt engineering, the visual style stayed consistent across all screens.</p>
                     </div>
-
                     <div class="mb-4 tech-stack">
                         <span class="tech-tag">Figma</span>
                         <span class="tech-tag">UX/UI Design</span>
@@ -1207,23 +850,17 @@
                         <span class="tech-tag">Generative AI</span>
                         <span class="tech-tag">Prompt Engineering</span>
                     </div>
-
                     <div class="mt-auto">
-                        <a
-                            href="https://www.figma.com/proto/HaXXEAI2uwouxoMByUvhTI/%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%9E%D7%9E%D7%A9%D7%A7%D7%99%D7%9D-%D7%9C%D7%9E%D7%95%D7%91%D7%99%D7%99%D7%9C?node-id=77-15&amp;t=ZushjgmuwgEF2fRM-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=71%3A7&amp;starting-point-node-id=349%3A139"
-                            target="_blank"
-                            class="btn btn-glass-primary w-100">
-
+                        <a href="https://www.figma.com/proto/HaXXEAI2uwouxoMByUvhTI/%D7%A2%D7%99%D7%A6%D7%95%D7%91-%D7%9E%D7%9E%D7%A9%D7%A7%D7%99%D7%9D-%D7%9C%D7%9E%D7%95%D7%91%D7%99%D7%99%D7%9C?node-id=77-15&amp;t=ZushjgmuwgEF2fRM-1&amp;scaling=scale-down&amp;content-scaling=fixed&amp;page-id=71%3A7&amp;starting-point-node-id=349%3A139"
+                            target="_blank" class="btn btn-glass-primary w-100">
                             <span data-lang="btn_view_prototype">View Prototype</span>
                             <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
                 </div>
-
                 <div class="col-lg-6 d-none d-lg-block position-relative image-side bg-glass-dark">
                     <div class="h-100 w-100 d-flex align-items-center justify-content-center">
                         <div id="pastellaGallery" class="carousel slide carousel-fade h-100 w-100" data-bs-ride="false">
-
                             <div class="carousel-indicators">
                                 <button type="button" data-bs-target="#pastellaGallery" data-bs-slide-to="0" class="active"></button>
                                 <button type="button" data-bs-target="#pastellaGallery" data-bs-slide-to="1"></button>
@@ -1231,71 +868,44 @@
                                 <button type="button" data-bs-target="#pastellaGallery" data-bs-slide-to="3"></button>
                                 <button type="button" data-bs-target="#pastellaGallery" data-bs-slide-to="4"></button>
                             </div>
-
                             <div class="carousel-inner h-100">
                                 <div class="carousel-item active h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="pa_img1_title">Opening Screen</h5>
-                                        </div>
-                                        <div class="iphone-mockup">
-                                            <img src="Media/OpeningPage.png" alt="Pastella Opening Screen" class="iphone-screen-img">
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="pa_img1_title">Opening Screen</h5></div>
+                                        <div class="iphone-mockup"><img src="Media/OpeningPage.png" alt="Pastella Opening Screen" class="iphone-screen-img"></div>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="pa_img2_title">AI Flour Scanner</h5>
-                                        </div>
-                                        <div class="iphone-mockup">
-                                            <img src="Media/Flour%20Scanner.png" alt="AI Flour Scanner Screen" class="iphone-screen-img">
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="pa_img2_title">AI Flour Scanner</h5></div>
+                                        <div class="iphone-mockup"><img src="Media/Flour%20Scanner.png" alt="AI Flour Scanner Screen" class="iphone-screen-img"></div>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="pa_img3_title">Guest Calculator</h5>
-                                        </div>
-                                        <div class="iphone-mockup">
-                                            <img src="Media/Guest%20Calculator.png" alt="Guest Calculator Screen" class="iphone-screen-img">
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="pa_img3_title">Guest Calculator</h5></div>
+                                        <div class="iphone-mockup"><img src="Media/Guest%20Calculator.png" alt="Guest Calculator Screen" class="iphone-screen-img"></div>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="pa_img4_title">Water Reminder</h5>
-                                        </div>
-                                        <div class="iphone-mockup">
-                                            <img src="Media/WaterReminder.png" alt="Water Reminder Screen" class="iphone-screen-img">
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="pa_img4_title">Water Reminder</h5></div>
+                                        <div class="iphone-mockup"><img src="Media/WaterReminder.png" alt="Water Reminder Screen" class="iphone-screen-img"></div>
                                     </div>
                                 </div>
-
                                 <div class="carousel-item h-100">
                                     <div class="d-flex flex-column align-items-center justify-content-center h-100 pb-5">
-                                        <div class="text-center mb-3 px-5 position-relative z-2">
-                                            <h5 class="fw-bold mb-1" data-lang="pa_img5_title">Disc Guide</h5>
-                                        </div>
-                                        <div class="iphone-mockup">
-                                            <img src="Media/DiskPage.png" alt="Disc Guide Screen" class="iphone-screen-img">
-                                        </div>
+                                        <div class="text-center mb-3 px-5 position-relative z-2"><h5 class="fw-bold mb-1" data-lang="pa_img5_title">Disc Guide</h5></div>
+                                        <div class="iphone-mockup"><img src="Media/DiskPage.png" alt="Disc Guide Screen" class="iphone-screen-img"></div>
                                     </div>
                                 </div>
                             </div>
-
                             <button class="carousel-control-prev" type="button" data-bs-target="#pastellaGallery" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon"></span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#pastellaGallery" data-bs-slide="next">
                                 <span class="carousel-control-next-icon"></span>
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -1303,54 +913,21 @@
         </div>
 
         <!-- SYNAPSE -->
-
         <div id="ai-platform-content" class="project-details-content glass-modal d-none container-fluid p-0 position-relative">
-
-            <button
-                class="close-project-btn"
-                onclick="closeProject()"
-                aria-label="Close project">
+            <button class="close-project-btn" onclick="closeProject()" aria-label="Close project">
                 <i class="fas fa-times" aria-hidden="true"></i>
             </button>
-
             <div class="synapse-layout">
-
                 <div class="p-5 d-flex flex-column content-side synapse-content">
-
                     <div class="d-flex align-items-center flex-wrap gap-3 mb-3">
-                        <span class="tech-tag" data-lang="synapse_tag">
-                            AI Systems- The Final Degree Project
-                        </span>
-                        <span class="text-muted">
-                            <i class="far fa-calendar-alt" aria-hidden="true"></i>
-                            2026
-                        </span>
+                        <span class="tech-tag" data-lang="synapse_tag">AI Systems- The Final Degree Project</span>
+                        <span class="text-muted"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2026</span>
                     </div>
-
-                    <h2
-                        class="display-6 fw-bold mb-2 text-dark-blue"
-                        data-lang="synapse_title">
-                        SYNAPSE
-                    </h2>
-
-                    <p
-                        class="text-gradient-main mb-3 small fw-bold"
-                        data-lang="synapse_subtitle">
-                        From Organizational Documents to Interactive Learning Presentations
-                    </p>
-
-                    <p class="small fw-bold mb-4" data-lang="synapse_disciplines">
-                        Product Design · UX/UI · Multi-Agent AI · Instructional Design
-                    </p>
-
+                    <h2 class="display-6 fw-bold mb-2 text-dark-blue" data-lang="synapse_title">SYNAPSE</h2>
+                    <p class="text-gradient-main mb-3 small fw-bold" data-lang="synapse_subtitle">From Organizational Documents to Interactive Learning Presentations</p>
+                    <p class="small fw-bold mb-4" data-lang="synapse_disciplines">Product Design · UX/UI · Multi-Agent AI · Instructional Design</p>
                     <div class="mb-4 description-text flex-grow-1">
-
-                        <h5
-                            class="border-bottom pb-2 d-inline-block border-secondary"
-                            data-lang="synapse_about_heading">
-                            About the Project
-                        </h5>
-
+                        <h5 class="border-bottom pb-2 d-inline-block border-secondary" data-lang="synapse_about_heading">About the Project</h5>
                         <p class="mt-2" data-lang="synapse_about">
                             SYNAPSE helps instructional designers turn complex organizational
                             information into structured learning experiences. We designed and
@@ -1358,149 +935,83 @@
                             analyze source materials, define learning objectives, structure
                             content, and generate interactive presentations.
                         </p>
-
-                        <h5
-                            class="mt-4 border-bottom pb-2 d-inline-block border-secondary"
-                            data-lang="synapse_approach_heading">
-                            Approach &amp; System Design
-                        </h5>
-
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="synapse_approach_heading">Approach &amp; System Design</h5>
                         <p class="mt-2" data-lang="synapse_approach1">
                             Drawing on the ADDIE instructional design model, we translated
                             the instructional design process into a collaborative workflow
                             between users and AI.
                         </p>
-
                         <p data-lang="synapse_approach2">
                             We defined specialized agents for research, learning architecture,
                             content creation, interface design, and quality review, along
                             with the coordination logic connecting their work.
                         </p>
-
                         <p data-lang="synapse_approach3">
                             Human-in-the-Loop checkpoints allow users to clarify requirements,
                             review the learning blueprint, and approve content before
                             presentation generation. The workflow was designed around source
                             materials and explicit user input.
                         </p>
-
-                        <h5
-                            class="mt-4 border-bottom pb-2 d-inline-block border-secondary"
-                            data-lang="synapse_ux_heading">
-                            User Experience
-                        </h5>
-
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="synapse_ux_heading">User Experience</h5>
                         <p class="mt-2" data-lang="synapse_ux1">
                             We designed an integrated workspace combining conversational
                             guidance, brand settings, and deliverable previews.
                         </p>
-
                         <p data-lang="synapse_ux2">
                             The central UX challenge was making a complex AI process
                             understandable and manageable. We mapped the journey from
                             document upload to final output, then used usability testing
                             to refine instructions, interface terminology, and readability.
                         </p>
-
-                        <h5
-                            class="mt-4 border-bottom pb-2 d-inline-block border-secondary"
-                            data-lang="synapse_tools_heading">
-                            Tools &amp; Technologies
-                        </h5>
-
-                        <p class="mt-2">
-                            <strong data-lang="synapse_tools">
-                                Python · Streamlit · Ollama · Local Language Models · HTML · CSS
-                            </strong>
-                        </p>
-
-                        <p data-lang="synapse_local">
-                            The platform runs locally, meeting the project’s deployment requirements.
-                        </p>
-
-                        <h5
-                            class="mt-4 border-bottom pb-2 d-inline-block border-secondary"
-                            data-lang="synapse_outcome_heading">
-                            Outcome
-                        </h5>
-
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="synapse_tools_heading">Tools &amp; Technologies</h5>
+                        <p class="mt-2"><strong data-lang="synapse_tools">Python · Streamlit · Ollama · Local Language Models · HTML · CSS</strong></p>
+                        <p data-lang="synapse_local">The platform runs locally, meeting the project’s deployment requirements.</p>
+                        <h5 class="mt-4 border-bottom pb-2 d-inline-block border-secondary" data-lang="synapse_outcome_heading">Outcome</h5>
                         <p class="mt-2" data-lang="synapse_outcome1">
                             A working prototype that takes users from source documents and
                             clarification conversations to an approved learning blueprint
                             and an interactive HTML presentation.
                         </p>
-
                         <p data-lang="synapse_outcome2">
                             The project brings together product thinking, instructional design,
                             UX/UI, and AI development in a single guided workflow.
                         </p>
-
                         <p class="fw-bold" data-lang="synapse_summary" hidden></p>
-
                     </div>
-
                     <div class="d-flex flex-wrap gap-3 mt-auto">
-                        <a
-                            href="synapse.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-glass-primary flex-fill text-center">
-
+                        <a href="https://synapse-landingpage.onrender.com/"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-glass-primary flex-fill text-center">
                             <span data-lang="synapse_landing">View Project Website</span>
                             <i class="fas fa-external-link-alt ms-2" aria-hidden="true"></i>
                         </a>
-
-                        <a
-                            href="https://projects.hit.ac.il/telem/prj-261018080553/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-glass flex-fill text-center">
-
+                        <a href="https://projects.hit.ac.il/telem/prj-261018080553/"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-glass flex-fill text-center">
                             <span data-lang="synapse_faculty">View on HIT</span>
                             <i class="fas fa-external-link-alt ms-2" aria-hidden="true"></i>
                         </a>
                     </div>
-
                 </div>
-
                 <div class="synapse-video-side">
                     <div class="w-100">
-
                         <div class="synapse-video-frame">
-                            <iframe
-                                id="synapse-video"
+                            <iframe id="synapse-video"
                                 data-src="https://player.vimeo.com/video/1217569884?h=985ac5f730&amp;title=0&amp;byline=0&amp;portrait=0&amp;dnt=1"
-                                title="SYNAPSE project video"
-                                allow="autoplay; fullscreen; picture-in-picture"
-                                allowfullscreen>
+                                title="SYNAPSE project video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
                             </iframe>
                         </div>
-
-                        <a
-                            href="https://vimeo.com/1217569884"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="d-block text-center mt-3 small"
-                            data-lang="synapse_video_link">
-                            Watch on Vimeo
-                        </a>
-
+                        <a href="https://vimeo.com/1217569884" target="_blank" rel="noopener noreferrer"
+                            class="d-block text-center mt-3 small" data-lang="synapse_video_link">Watch on Vimeo</a>
                     </div>
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <!-- Contact -->
-
     <section id="contact" class="editorial-contact-section">
         <div class="big-contact-bg-text reveal-slide-right" data-lang="contact_bg">Contact</div>
-
         <div class="container contact-content position-relative z-2">
             <div class="row justify-content-between">
-
                 <div class="col-lg-4 mb-5 mb-lg-0 d-flex flex-column justify-content-between fade-up">
                     <div class="mb-5">
                         <div class="d-flex flex-column align-items-start gap-3">
@@ -1508,14 +1019,12 @@
                                 <span class="dot"></span>
                                 <span data-lang="contact_ready">Ready to start something new?</span>
                             </button>
-
                             <button class="pill-btn">
                                 <span class="dot empty"></span>
                                 <span data-lang="contact_chat">Let's Chat</span>
                             </button>
                         </div>
                     </div>
-
                     <div class="contact-details mt-auto">
                         <div class="contact-row d-flex align-items-start mb-4">
                             <div class="icon-box me-3"><i class="fas fa-envelope fa-lg"></i></div>
@@ -1524,7 +1033,6 @@
                                 <a href="mailto:lihiharary9@gmail.com" class="detail-value">lihiharary9@gmail.com</a>
                             </div>
                         </div>
-
                         <div class="contact-row d-flex align-items-start mb-4">
                             <div class="icon-box me-3"><i class="fab fa-linkedin-in fa-lg"></i></div>
                             <div>
@@ -1532,7 +1040,6 @@
                                 <a href="https://www.linkedin.com/in/lihiharary/" target="_blank" class="detail-value">LinkedIn Profile ↗</a>
                             </div>
                         </div>
-
                         <div class="contact-row d-flex align-items-start">
                             <div class="icon-box me-3"><i class="fas fa-map-marker-alt fa-lg"></i></div>
                             <div>
@@ -1542,10 +1049,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-7 fade-up delay-200">
                     <form class="editorial-form">
-
                         <div class="row mb-5">
                             <div class="col-md-6 mb-4 mb-md-0">
                                 <div class="input-group-minimal">
@@ -1553,7 +1058,6 @@
                                     <label data-lang="form_name">Name</label>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="input-group-minimal">
                                     <input type="text" class="input-minimal" placeholder=" ">
@@ -1561,7 +1065,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mb-5">
                             <div class="col-md-6 mb-4 mb-md-0">
                                 <div class="input-group-minimal">
@@ -1569,7 +1072,6 @@
                                     <label data-lang="form_email">Email</label>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="input-group-minimal">
                                     <input type="tel" class="input-minimal" placeholder=" ">
@@ -1577,7 +1079,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mb-5">
                             <div class="col-12">
                                 <div class="input-group-minimal">
@@ -1586,7 +1087,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row align-items-center mt-5">
                             <div class="col-md-6 mb-3 mb-md-0"></div>
                             <div class="col-md-6 text-md-end">
@@ -1596,201 +1096,93 @@
                                 </button>
                             </div>
                         </div>
-
                     </form>
                 </div>
-
             </div>
         </div>
     </section>
-
-    <!-- Existing scripts -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="main.js"></script>
 
     <!-- Portfolio updates -->
-
     <script>
         (() => {
             const additions = {
                 en: {
-                    hero_text:
-                        "UX/UI Designer with a B.A. in Instructional Technologies and a foundation in front-end development. Designing intuitive interfaces, clear user flows, and scalable design systems.",
-
-                    about_text:
-                        "UX/UI Designer with a B.A. in Instructional Technologies and a foundation in front-end development. I design intuitive interfaces for complex systems, translating user needs into clear flows and consistent, scalable design systems. I combine analytical thinking, attention to detail, and AI tools to support an efficient design process.",
-
-                    desc_ux:
-                        "Wireframing, prototyping, design systems, and designing intuitive interfaces.",
-
+                    hero_text: "UX/UI Designer with a B.A. in Instructional Technologies and a foundation in front-end development. Designing intuitive interfaces, clear user flows, and scalable design systems.",
+                    about_text: "UX/UI Designer with a B.A. in Instructional Technologies and a foundation in front-end development. I design intuitive interfaces for complex systems, translating user needs into clear flows and consistent, scalable design systems. I combine analytical thinking, attention to detail, and AI tools to support an efficient design process.",
+                    desc_ux: "Wireframing, prototyping, design systems, and designing intuitive interfaces.",
                     cat_ai_systems: "AI Systems Project",
-
                     matrix_role: "UX/UI Designer at Matrix",
-
                     synapse_tag: "AI Systems- The Final Degree Project",
-
                     synapse_title: "SYNAPSE",
-
-                    synapse_subtitle:
-                        "From Organizational Documents to Interactive Learning Presentations",
-
-                    synapse_disciplines:
-                        "Product Design · UX/UI · Multi-Agent AI · Instructional Design",
-
-                    synapse_about_heading:
-                        "About the Project",
-
-                    synapse_about:
-                        "SYNAPSE helps instructional designers turn complex organizational information into structured learning experiences. We designed and developed a platform that coordinates specialized AI agents to analyze source materials, define learning objectives, structure content, and generate interactive presentations.",
-
-                    synapse_approach_heading:
-                        "Approach & System Design",
-
-                    synapse_approach1:
-                        "Drawing on the ADDIE instructional design model, we translated the instructional design process into a collaborative workflow between users and AI.",
-
-                    synapse_approach2:
-                        "We defined specialized agents for research, learning architecture, content creation, interface design, and quality review, along with the coordination logic connecting their work.",
-
-                    synapse_approach3:
-                        "Human-in-the-Loop checkpoints allow users to clarify requirements, review the learning blueprint, and approve content before presentation generation. The workflow was designed around source materials and explicit user input.",
-
-                    synapse_ux_heading:
-                        "User Experience",
-
-                    synapse_ux1:
-                        "We designed an integrated workspace combining conversational guidance, brand settings, and deliverable previews.",
-
-                    synapse_ux2:
-                        "The central UX challenge was making a complex AI process understandable and manageable. We mapped the journey from document upload to final output, then used usability testing to refine instructions, interface terminology, and readability.",
-
-                    synapse_tools_heading:
-                        "Tools & Technologies",
-
-                    synapse_tools:
-                        "Python · Streamlit · Ollama · Local Language Models · HTML · CSS",
-
-                    synapse_local:
-                        "The platform runs locally, meeting the project’s deployment requirements.",
-
-                    synapse_outcome_heading:
-                        "Outcome",
-
-                    synapse_outcome1:
-                        "A working prototype that takes users from source documents and clarification conversations to an approved learning blueprint and an interactive HTML presentation.",
-
-                    synapse_outcome2:
-                        "The project brings together product thinking, instructional design, UX/UI, and AI development in a single guided workflow.",
-
+                    synapse_subtitle: "From Organizational Documents to Interactive Learning Presentations",
+                    synapse_disciplines: "Product Design · UX/UI · Multi-Agent AI · Instructional Design",
+                    synapse_about_heading: "About the Project",
+                    synapse_about: "SYNAPSE helps instructional designers turn complex organizational information into structured learning experiences. We designed and developed a platform that coordinates specialized AI agents to analyze source materials, define learning objectives, structure content, and generate interactive presentations.",
+                    synapse_approach_heading: "Approach & System Design",
+                    synapse_approach1: "Drawing on the ADDIE instructional design model, we translated the instructional design process into a collaborative workflow between users and AI.",
+                    synapse_approach2: "We defined specialized agents for research, learning architecture, content creation, interface design, and quality review, along with the coordination logic connecting their work.",
+                    synapse_approach3: "Human-in-the-Loop checkpoints allow users to clarify requirements, review the learning blueprint, and approve content before presentation generation. The workflow was designed around source materials and explicit user input.",
+                    synapse_ux_heading: "User Experience",
+                    synapse_ux1: "We designed an integrated workspace combining conversational guidance, brand settings, and deliverable previews.",
+                    synapse_ux2: "The central UX challenge was making a complex AI process understandable and manageable. We mapped the journey from document upload to final output, then used usability testing to refine instructions, interface terminology, and readability.",
+                    synapse_tools_heading: "Tools & Technologies",
+                    synapse_tools: "Python · Streamlit · Ollama · Local Language Models · HTML · CSS",
+                    synapse_local: "The platform runs locally, meeting the project’s deployment requirements.",
+                    synapse_outcome_heading: "Outcome",
+                    synapse_outcome1: "A working prototype that takes users from source documents and clarification conversations to an approved learning blueprint and an interactive HTML presentation.",
+                    synapse_outcome2: "The project brings together product thinking, instructional design, UX/UI, and AI development in a single guided workflow.",
                     synapse_summary: "",
-
                     synapse_landing: "View Project Website",
                     synapse_faculty: "View on HIT",
                     synapse_video_link: "Watch on Vimeo"
                 },
-
                 he: {
-                    hero_text:
-                        "מעצבת UX/UI בעלת תואר ראשון בטכנולוגיות למידה ובסיס בפיתוח צד לקוח. מעצבת ממשקים אינטואיטיביים, תהליכי משתמש ברורים ומערכות עיצוב הניתנות להרחבה.",
-
-                    about_text:
-                        "מעצבת UX/UI בעלת תואר ראשון בטכנולוגיות למידה ובסיס בפיתוח צד לקוח. אני מעצבת ממשקים אינטואיטיביים למערכות מורכבות, ומתרגמת צורכי משתמשים לתהליכים ברורים ולמערכות עיצוב עקביות הניתנות להרחבה. אני משלבת חשיבה אנליטית, תשומת לב לפרטים וכלי AI לתמיכה בתהליך עיצוב יעיל.",
-
-                    desc_ux:
-                        "אפיון, יצירת פרוטוטייפים, בניית Design Systems ועיצוב ממשקים אינטואיטיביים.",
-
+                    hero_text: "מעצבת UX/UI בעלת תואר ראשון בטכנולוגיות למידה ובסיס בפיתוח צד לקוח. מעצבת ממשקים אינטואיטיביים, תהליכי משתמש ברורים ומערכות עיצוב הניתנות להרחבה.",
+                    about_text: "מעצבת UX/UI בעלת תואר ראשון בטכנולוגיות למידה ובסיס בפיתוח צד לקוח. אני מעצבת ממשקים אינטואיטיביים למערכות מורכבות, ומתרגמת צורכי משתמשים לתהליכים ברורים ולמערכות עיצוב עקביות הניתנות להרחבה. אני משלבת חשיבה אנליטית, תשומת לב לפרטים וכלי AI לתמיכה בתהליך עיצוב יעיל.",
+                    desc_ux: "אפיון, יצירת פרוטוטייפים, בניית Design Systems ועיצוב ממשקים אינטואיטיביים.",
                     cat_ai_systems: "פרויקט מערכות AI",
-
                     matrix_role: "מעצבת UX/UI במטריקס",
-
-                    synapse_tag:
-                        "פרויקט גמר | אפיון, עיצוב ופיתוח מוצר מבוסס AI",
-
+                    synapse_tag: "פרויקט גמר | אפיון, עיצוב ופיתוח מוצר מבוסס AI",
                     synapse_title: "SYNAPSE",
-
-                    synapse_subtitle:
-                        "ממסמך ארגוני למצגת למידה אינטראקטיבית",
-
+                    synapse_subtitle: "ממסמך ארגוני למצגת למידה אינטראקטיבית",
                     synapse_disciplines: "",
-
-                    synapse_about_heading:
-                        "על הפרויקט",
-
-                    synapse_about:
-                        "פיתוח הדרכה דורש להפוך מידע מקצועי לתוכן ברור, מובנה ומותאם ללומדים. במסגרת הפרויקט פיתחנו את SYNAPSE, מערכת המשלבת מספר סוכני בינה מלאכותית כדי לתמוך בתהליך, מניתוח חומרי המקור והגדרת מטרות הלמידה ועד להפקת מצגת אינטראקטיבית.",
-
-                    synapse_approach_heading:
-                        "החשיבה מאחורי הפתרון",
-
-                    synapse_approach1:
-                        "תרגמנו את תהליך פיתוח ההדרכה לתהליך עבודה משותף לאדם ול־AI, בהשראת מודל ADDIE. חילקנו את העבודה בין סוכנים המתמחים במחקר, תכנון, כתיבת תוכן, עיצוב ובקרת איכות, והגדרנו כיצד המידע עובר ביניהם.",
-
-                    synapse_approach2:
-                        "כדי לאפשר למשתמש לבחון את התוכן ולהשפיע עליו, שילבנו שאלות הבהרה ונקודות אישור לפני ההפקה. התהליך תוכנן להתבסס על חומרי המקור ועל המידע שהמשתמש מוסיף.",
-
+                    synapse_about_heading: "על הפרויקט",
+                    synapse_about: "פיתוח הדרכה דורש להפוך מידע מקצועי לתוכן ברור, מובנה ומותאם ללומדים. במסגרת הפרויקט פיתחנו את SYNAPSE, מערכת המשלבת מספר סוכני בינה מלאכותית כדי לתמוך בתהליך, מניתוח חומרי המקור והגדרת מטרות הלמידה ועד להפקת מצגת אינטראקטיבית.",
+                    synapse_approach_heading: "החשיבה מאחורי הפתרון",
+                    synapse_approach1: "תרגמנו את תהליך פיתוח ההדרכה לתהליך עבודה משותף לאדם ול־AI, בהשראת מודל ADDIE. חילקנו את העבודה בין סוכנים המתמחים במחקר, תכנון, כתיבת תוכן, עיצוב ובקרת איכות, והגדרנו כיצד המידע עובר ביניהם.",
+                    synapse_approach2: "כדי לאפשר למשתמש לבחון את התוכן ולהשפיע עליו, שילבנו שאלות הבהרה ונקודות אישור לפני ההפקה. התהליך תוכנן להתבסס על חומרי המקור ועל המידע שהמשתמש מוסיף.",
                     synapse_approach3: "",
-
-                    synapse_ux_heading:
-                        "חוויית המשתמש",
-
-                    synapse_ux1:
-                        "אפיינו ועיצבנו סביבת עבודה המשלבת צ׳אט מלווה, הגדרות מיתוג ותצוגת תוצרים. האתגר המרכזי היה להפוך מערכת מורכבת לתהליך ברור, שבו המשתמש מבין מה נדרש ממנו ומה השלב הבא. בדיקות משתמשים הובילו לשיפור ההנחיות, שמות האזורים בממשק וקריאות התוכן.",
-
+                    synapse_ux_heading: "חוויית המשתמש",
+                    synapse_ux1: "אפיינו ועיצבנו סביבת עבודה המשלבת צ׳אט מלווה, הגדרות מיתוג ותצוגת תוצרים. האתגר המרכזי היה להפוך מערכת מורכבת לתהליך ברור, שבו המשתמש מבין מה נדרש ממנו ומה השלב הבא. בדיקות משתמשים הובילו לשיפור ההנחיות, שמות האזורים בממשק וקריאות התוכן.",
                     synapse_ux2: "",
-
-                    synapse_tools_heading:
-                        "כלים וטכנולוגיות",
-
-                    synapse_tools:
-                        "Python · Streamlit · Ollama · מודלי שפה מקומיים · HTML · CSS",
-
-                    synapse_local:
-                        "המערכת פותחה להפעלה מקומית, בהתאם לדרישות הפרויקט.",
-
-                    synapse_outcome_heading:
-                        "התוצר",
-
-                    synapse_outcome1:
-                        "אב־טיפוס עובד המאפשר להעלות מסמך, להשלים מידע בשיחה, לבחון ולאשר תוכנית למידה ולהפיק מצגת HTML אינטראקטיבית. הפרויקט מחבר בין חשיבה פדגוגית, עיצוב חוויית משתמש ופיתוח מערכת AI לכדי תהליך עבודה אחד.",
-
+                    synapse_tools_heading: "כלים וטכנולוגיות",
+                    synapse_tools: "Python · Streamlit · Ollama · מודלי שפה מקומיים · HTML · CSS",
+                    synapse_local: "המערכת פותחה להפעלה מקומית, בהתאם לדרישות הפרויקט.",
+                    synapse_outcome_heading: "התוצר",
+                    synapse_outcome1: "אב־טיפוס עובד המאפשר להעלות מסמך, להשלים מידע בשיחה, לבחון ולאשר תוכנית למידה ולהפיק מצגת HTML אינטראקטיבית. הפרויקט מחבר בין חשיבה פדגוגית, עיצוב חוויית משתמש ופיתוח מערכת AI לכדי תהליך עבודה אחד.",
                     synapse_outcome2: "",
-
-                    synapse_summary:
-                        "אפיון מוצר · UX/UI · מחקר משתמשים · פיתוח הדרכה · מערכות מרובות סוכנים · פיתוח ב־Python",
-
+                    synapse_summary: "אפיון מוצר · UX/UI · מחקר משתמשים · פיתוח הדרכה · מערכות מרובות סוכנים · פיתוח ב־Python",
                     synapse_landing: "לאתר הפרויקט",
                     synapse_faculty: "לפרויקט באתר HIT",
                     synapse_video_link: "לצפייה ב-Vimeo"
                 }
             };
 
-            /*
-             * Extend the existing translation dictionary.
-             */
             if (typeof translations !== "undefined") {
                 Object.assign(translations.en, additions.en);
                 Object.assign(translations.he, additions.he);
             }
 
-            /*
-             * Apply the updated texts for the selected language.
-             */
             function applyAddedTranslations() {
-                const lang =
-                    document.documentElement.lang === "he" ? "he" : "en";
+                const lang = document.documentElement.lang === "he" ? "he" : "en";
 
                 document.querySelectorAll("[data-lang]").forEach(element => {
                     const key = element.getAttribute("data-lang");
-
-                    if (
-                        Object.prototype.hasOwnProperty.call(
-                            additions[lang],
-                            key
-                        )
-                    ) {
+                    if (Object.prototype.hasOwnProperty.call(additions[lang], key)) {
                         const text = additions[lang][key];
-
                         element.textContent = text;
                         element.hidden = text === "";
                     }
@@ -1798,14 +1190,8 @@
             }
 
             applyAddedTranslations();
+            document.getElementById("lang-toggle")?.addEventListener("click", applyAddedTranslations);
 
-            document
-                .getElementById("lang-toggle")
-                ?.addEventListener("click", applyAddedTranslations);
-
-            /*
-             * Load the Vimeo player when SYNAPSE opens.
-             */
             const originalOpenProject = window.openProject;
 
             window.openProject = function(projectId) {
@@ -1814,7 +1200,6 @@
                 }
 
                 originalOpenProject(projectId);
-
                 const video = document.getElementById("synapse-video");
 
                 if (projectId === "ai-platform") {
@@ -1826,15 +1211,10 @@
                 }
             };
 
-            /*
-             * Stop the Vimeo player when the project closes.
-             */
             const originalCloseProject = window.closeProject;
 
             window.closeProject = function() {
-                document
-                    .getElementById("synapse-video")
-                    ?.removeAttribute("src");
+                document.getElementById("synapse-video")?.removeAttribute("src");
 
                 if (typeof originalCloseProject === "function") {
                     originalCloseProject();
@@ -1842,6 +1222,5 @@
             };
         })();
     </script>
-
 </body>
 </html>
